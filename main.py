@@ -9,13 +9,17 @@ def markup(inputIs):
 	inputIs += 10
 	return inputIs, "key 1"
 
+def smasher(inputIs):
+	return f"Andrey {inputIs}", "key 2"
+
 def zipMethods(*args):
 	# create a list of functions saved as arguments
 	unpackList = list(args)
 	print(unpackList)
 	return unpackList
 
-unpackList = zipMethods(adder, markup)
+# manually add methods here medokusai
+unpackList = zipMethods(adder, markup, smasher)
 
 def makeDict (unpackList):
 	my_dict = {}
@@ -39,5 +43,6 @@ def useMethods(keyValue, cdm1):
 
 a1 = useMethods(0,cdm1)
 a2 = useMethods(1,cdm1)
+a3 = useMethods(2,cdm1)
 
-print(a1(5),a2(20))
+print(a1(5),a2(20),a3("sucks") )
